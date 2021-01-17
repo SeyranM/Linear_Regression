@@ -7,6 +7,7 @@ class LinearRegression:
     def __init__(self):
         
         self.betta = None
+	self.loss = None
 
     def fit_least_squares(self, X, Y):
         
