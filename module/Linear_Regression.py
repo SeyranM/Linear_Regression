@@ -7,7 +7,7 @@ class LinearRegression:
     def __init__(self):
         
         self.betta = None
-	self.loss = None
+        self._loss = None
 
     def fit_least_squares(self, X, Y):
         
@@ -47,9 +47,9 @@ class LinearRegression:
     
     def loss(self, Y):
         
-        self.loss = np.sum((self.Y_pred - Y)**2) / len(Y)
+        self._loss = np.sum((self.Y_pred - Y)**2) / len(Y)
         
-        return self.loss
+        return self._loss
     
     def plot(self, X, Y, Y_pred):
         fig, axes = plt.subplots()
